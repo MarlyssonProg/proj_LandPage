@@ -1,10 +1,13 @@
+/**/
 header {
     width: 100%;
 }
 
+/*1º NAV referente a redes sociais */
 .header-content {
     display: flex;
     align-items: center;
+    /*Espaçar elementos entre si utilizando todo espaço do container*/
     justify-content: space-between;
 }
 
@@ -14,24 +17,34 @@ i {
 
 .header-icons {
     display: flex;
+    /*Espaçar elementos entre si utilizando um espaço fixo entre  eles*/
     gap: 14px;
 
 }
 
+/*Ao passar o mouse por cima do icone */
 .header-icons a:hover {
     i {
+        /*Utilizando o keyframes abaixo / intervalo / repetição infinita*/
         animation: translateY 0.8s infinite alternate;
         color: $red-light;
     }
 }
 
+/*Cria uma animação de suspenção de ícone */
 @keyframes translateY {
+
+    /*Começa daqui*/
     from {
+
+        /*Eixo vertical,posição inicial/  tamanho inicial icone*/
         transform: translateY(0) scale(1);
     }
 
 
+    /*Até aqui*/
     to {
+        /*Eixo vertical,posição final(subir)/  tamanho final icone*/
         transform: translateY(-10px) scale(1.1);
     }
 }
@@ -42,12 +55,15 @@ i {
     border-radius: 4px;
     color: $white-normal;
     background-color: transparent;
-    transition: background-color 0.8s;
+
+
 }
 
 .header-button:hover {
     border: 1px solid $red-light;
     background-color: $red-light;
+    transition: background-color 0.8s;
+
 }
 
 .header-logo {
@@ -57,15 +73,18 @@ i {
     margin-top: 14px;
 }
 
+/*Adiciona responsividade para os itens do header*/
 @media screen and (max-width:768px) {
     .header-content {
         width: 100%;
+        /*Muda a orientação  dos items para column no mobile*/
         flex-direction: column;
         align-items: center;
         justify-content: center;
 
         i {
             margin-top: 16px;
+            /*Controla o tamanho dos ícones no mobile*/
             font-size: 34px;
         }
     }
