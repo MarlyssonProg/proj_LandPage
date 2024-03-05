@@ -1,6 +1,6 @@
 /*Responsável pelo alinhamento da página*/
 .container {
-    max-width: 1400px;
+    max-width: 1440px;
     /*Centralizando 0=cima e baixo e auto=direita e esquerda*/
     margin: 0 auto;
     padding: 0 8px;
@@ -105,7 +105,7 @@
     }
 }
 
-@media screen and (max-width: 480px) {
+/*@media screen and (max-width: 480px) {
     .hero h1 {
         font-size: 24px;
     }

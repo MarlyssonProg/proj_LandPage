@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 * {
   margin: 0;
   padding: 0;
@@ -5,13 +7,16 @@
   outline: 0;
 }
 
+/**/
 header {
   width: 100%;
 }
 
+/*1º NAV referente a redes sociais */
 .header-content {
   display: flex;
   align-items: center;
+  /*Espaçar elementos entre si utilizando todo espaço do container*/
   justify-content: space-between;
 }
 
@@ -21,34 +26,45 @@ i {
 
 .header-icons {
   display: flex;
+  /*Espaçar elementos entre si utilizando um espaço fixo entre  eles*/
   gap: 14px;
 }
 
+/*Ao passar o mouse por cima do icone */
 .header-icons a:hover i {
+  /*Utilizando o keyframes abaixo / intervalo / repetição infinita*/
   animation: translateY 0.8s infinite alternate;
   color: #d34040;
 }
 
+/*Cria uma animação de suspenção de ícone */
 @keyframes translateY {
+
+  /*Começa daqui*/
   from {
+    /*Eixo vertical,posição inicial/  tamanho inicial icone*/
     transform: translateY(0) scale(1);
   }
+
+  /*Até aqui*/
   to {
+    /*Eixo vertical,posição final(subir)/  tamanho final icone*/
     transform: translateY(-10px) scale(1.1);
   }
 }
+
 .header-button {
   border: 1px solid #fff;
   padding: 8px 24px;
   border-radius: 4px;
   color: #fff;
   background-color: transparent;
-  transition: background-color 0.8s;
 }
 
 .header-button:hover {
   border: 1px solid #d34040;
   background-color: #d34040;
+  transition: background-color 0.8s;
 }
 
 .header-logo {
@@ -58,51 +74,67 @@ i {
   margin-top: 14px;
 }
 
+/*Adiciona responsividade para os itens do header*/
 @media screen and (max-width: 768px) {
   .header-content {
     width: 100%;
+    /*Muda a orientação  dos items para column no mobile*/
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
+
   .header-content i {
     margin-top: 16px;
+    /*Controla o tamanho dos ícones no mobile*/
     font-size: 34px;
   }
+
   .header-logo img {
     width: 160px;
     margin-top: 46px;
   }
+
   .header-button {
     display: none;
   }
 }
+
+/*Responsável pelo alinhamento da página*/
 .container {
-  max-width: 1400px;
+  max-width: 1440px;
+  /*Centralizando 0=cima e baixo e auto=direita e esquerda*/
   margin: 0 auto;
   padding: 0 8px;
 }
 
+/*Imagem de fundo*/
 .bg-home {
   position: relative;
 }
 
+/*Pseuso elemento*/
 .bg-home::before {
   content: "";
   display: block;
   position: absolute;
+  /*Edita e seleciona a imagem de fundo*/
   background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("../assets/bg.svg");
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
+  /*Imagem embaixo dos demais elementos*/
   z-index: -1;
+  /*Ajusta a imagem (bg-home) para cobrir tomar a div a qual está inserida*/
   background-size: cover;
+  /*Bloqueia a repetição da imagem de fundo (bg-home)*/
   background-repeat: no-repeat;
   background-position: 50% 0;
   opacity: 0.9;
 }
 
+/*Conteúdo da chamada para ação principal*/
 .hero {
   color: #fff;
   min-height: 80vh;
@@ -112,17 +144,22 @@ i {
   justify-content: center;
   padding: 14px;
 }
+
+/*Refere-se ao texto principal do hero*/
 .hero h1 {
   text-align: center;
   line-height: 150%;
   max-width: 940px;
   font-size: 46px;
 }
+
+/*Refere-se ao texto do paragrafo do hero*/
 .hero p {
   text-align: center;
   margin: 14px 0;
 }
 
+/*Estilizando o botão de contato*/
 .button-contact {
   padding: 14px 28px;
   color: #fff;
@@ -133,36 +170,54 @@ i {
   margin: 14px 0;
 }
 
+/*Uso da Animação Botão de contato*/
 .button-contact:hover {
   animation: scaleButton 0.8s alternate infinite;
 }
 
+/*Criação da Animação Botão de contato*/
 @keyframes scaleButton {
   from {
     transform: scale(1);
   }
+
   to {
     transform: scale(1.07);
   }
 }
+
+/*Media Querie - Responsável por tonar o site responsivo 
+para dispositivos mobile*/
 @media screen and (max-width: 768px) {
   .hero {
+
+    /*Quando a janela atingir até 768px o 
+    hero tomará 60% da visualização total*/
+
     min-height: 60vh;
   }
+
   .hero h1 {
-    font-size: 34px;
+    font-size: 30px;
     padding: 0 14px;
-    width: 100px;
+    width: 100%;
   }
+
   .hero p {
     font-size: 14px;
   }
 }
+
+/*Media Querie - Responsável por tonar o site responsivo 
+para dispositivos menores*/
 @media screen and (max-width: 480px) {
   .hero h1 {
     font-size: 24px;
   }
+
 }
+
+/*Estilização do Sobre*/
 .about {
   background-color: #06121e;
   overflow: hidden;
@@ -174,12 +229,18 @@ i {
   align-items: center;
   justify-content: center;
   gap: 14px;
+  /*Sentido horário cima/direita/baixo/ esquerda*/
   padding: 34px 14px 64px 14px;
 }
+
 .about-content img {
   max-width: 570px;
 }
 
+/*A imagem e o sobre estão cada um dentro de uma div*/
+/*Visto isso ao utilizar flex:1; cada div irá ocupar tamanhos
+  equivalentes, dentro do espaço proporcionalmente as duas
+  divs*/
 .about-content div {
   flex: 1;
 }
@@ -188,6 +249,7 @@ i {
   font-size: 38px;
   margin-bottom: 24px;
 }
+
 .about-description p {
   margin-bottom: 14px;
   line-height: 150%;
@@ -198,6 +260,7 @@ i {
     flex-direction: column;
   }
 }
+
 body {
   font-family: "Sora", sans-serif;
   width: 100%;
@@ -222,4 +285,6 @@ img {
 a {
   cursor: pointer;
   text-decoration: none;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
