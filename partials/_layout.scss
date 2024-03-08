@@ -331,3 +331,75 @@
     }
 
 }
+
+// ------------------Footer-------------------
+
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 54px 0;
+    gap: 24px;
+    color: $white-normal;
+
+}
+
+.footer-icons {
+    display: flex;
+    gap: 20px;
+    color: $white-normal;
+}
+
+// ---------------------Botão Whats------------------------------
+
+.btn-whatsap {
+    position: fixed;
+    bottom: 14px;
+    right: 24px;
+    z-index: 100;
+
+    img {
+        max-width: 74px;
+        cursor: pointer;
+        transition: transform 0.6s;
+    }
+
+    img:hover {
+        transform: scale(1.2);
+    }
+
+
+}
+
+.btn-whatsap .tooltip-text {
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    top: 8px;
+    left: -144px;
+    padding: 6px;
+    border-radius: 6px;
+    text-align: center;
+    background-color: $white-normal;
+    opacity: 0;
+    transition: opacity 0.9s;
+
+
+
+
+}
+
+.btn-whatsap:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media screen and (max-width:768px) {
+    .btn-whatsap {
+        img {
+            max-width: 64px;
+        }
+    }
+}
