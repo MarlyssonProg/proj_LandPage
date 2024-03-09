@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,11 +13,9 @@
         integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="style.css">
-
-
-
-    <title>EF.Licitações</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <title>Barbearia Primavera</title>
 </head>
 
 <body>
@@ -27,7 +26,7 @@
         <header>
             <!--Navegação (Rede Social)-->
             <nav class="header-content container">
-                <div class="header-icons">
+                <div class="header-icons" data-aos="fade-down">
 
                     <a href="#">
                         <i class="fa-brands fa-instagram fa-2x"></i>
@@ -41,39 +40,43 @@
 
                 </div>
                 <!--Navegação (Logo)-->
-                <div class="header-logo">
-                    <img src="assets/logo.svg" alt="logo-principal" />
+                <div class="header-logo" data-aos="fade-up" data-aos-delay="200">
+                    <img data-aos="flip-up" data-aos-delay="200" data-aos-duration="1500" src="assets/logo.svg"
+                        alt="logo-principal" data-aos="fade-up" />
                 </div>
 
                 <!--Navegação (Botão Header - Agendar horário)-->
-                <div>
-                    <a class="header-button" href="#">Agendar horário</a>
+                <div data-aos="fade-down">
+                    <a class="header-button" href="https://wa.me/5586988502950/?text=Agendar meu corte!">Agendar
+                        horário</a>
                 </div>
 
             </nav>
 
 
         </header>
-        <main class="hero container">
+        <main class="hero container" data-aos="fade-up" data-aos-delay="400">
 
             <h1>ESTILO É UM REFLEXO DA SUA ATITUDE E SUA PERSONALIDADE.</h1>
             <p>Horário de funcionamento: 09:00 às 19:00</p>
-            <a href="#" class="button-contact" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/5586988502950/?text=Agendar meu corte!" class="button-contact" target="_blank"
+                rel="noopener noreferrer">
                 Agendar horário
             </a>
 
         </main>
     </div>
 
+    <!--SERVIÇES-->
     <section class="about">
         <div class="container about-content">
             <!--Imagem do sobre-->
-            <div>
+            <div data-aos="zoom-in" data-aos-duration="550">
                 <img src="assets/images.svg" alt="Imagem sobre" />
             </div>
 
 
-            <div class="about-description">
+            <div class="about-description" data-aos="zoom-out-left" data-aos-duration="550">
                 <h2>Sobre</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem similique doloremque sint
                     debitis, cumque natus perspiciatis vero aspernatur reprehenderit cupiditate sapiente,
@@ -92,10 +95,10 @@
         </div>
 
         <section class="haircut">
-            <!--Fotos dos Cortes-->
-            <div class="haircuts-corte">
+            <!--Fotos dos Corte-->
+            <div class="haircuts-corte" data-aos="fade-up" data-aos-delay="200">
                 <img src="assets/corte1.png" alt="Corte Social" />
-                <!--Fotos dos Cortes-->
+                <!--Descrição e Preços Corte-->
                 <div class="haircuts-corte-preco">
                     <strong>Corte Social</strong>
                     <button>R$ 45,00</button>
@@ -103,26 +106,28 @@
             </div>
 
 
-            <!--Fotos dos Cortes-->
-            <div class="haircuts-barba">
+            <!--Fotos Barba-->
+            <div class="haircuts-barba" data-aos="fade-up" data-aos-delay="300">
                 <img src="assets/corte2.png" alt="Barba Completa" />
-                <!--Fotos dos Cortes-->
+
+                <!--Descrição e Preços Barba-->
                 <div class="haircuts-barba-preco">
                     <strong>Barba Completa</strong>
                     <button>R$ 35,00</button>
                 </div>
             </div>
 
-            <!--Fotos dos Cortes-->
-            <div class="haircuts-corte-barba">
+            <!--Foto Corte + Barba-->
+            <div class="haircuts-corte-barba" data-aos="fade-up" data-aos-delay="400">
                 <img src="assets/corte3.png" alt="Corte e Barba" />
-                <!--Fotos dos Cortes-->
-                <div class="haircuts-corte-barba-preco">
-                    <strong>Corte e Barba</strong>
-                    <button>R$ 85,00</button>
-                </div>
+                <!--Descrição e Preços Corte + Barba-->
+                <div class="haircuts-corte-barba" data-aos="fade-up" data-aos-delay="400">
+                    <div class="haircuts-corte-barba-preco">
+                        <strong>Corte e Barba</strong>
+                        <button>R$ 85,00</button>
+                    </div>
 
-            </div>
+                </div>
 
 
         </section>
@@ -141,7 +146,7 @@
         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade">
     </iframe>
-    <!----------------------------------Icones--------------------------------->
+    <!----------------------------------Iconges--------------------------------->
 
     <footer class="footer">
         <div class="footer-icons">
@@ -168,12 +173,13 @@
     </footer>
 
     <!-------------------Botão Whatssap--------------------------------->
-    <a href="#" class="btn-whatsap">
+    <a href="https://wa.me/5586988502950/?text=Agendar meu corte!" class="btn-whatsap" target="_blank "
+        rel="noopener noreferrer" data-aos="zoom-in-up" data-aos-delay="400">
         <img src="assets/whatssapp.svg" alt="Botão Whatssap" />
         <span class="tooltip-text">Agende seu horário!</span>
     </a>
 
-
+    <script src="/script.js"></script>
 </body>
 
 </html>
